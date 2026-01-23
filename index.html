@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <title>Week 4</title>
   <style>
+    /* ⭐ 중요: iframe 안 기본 여백 제거 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f9f8f7; /* 콜아웃 색과 맞추기 */
+    }
+
     .week-box {
       width: 1150px;
       height: 58px;
@@ -13,52 +20,63 @@
       border-radius: 10px;
       background: #f9f8f7;
       font-family: "Segoe UI", sans-serif;
-      gap: 14px; /* 하트 사이 간격 */
+      gap: 14px;
     }
 
-    /* 하트 크기별 */
-    .heart-xs { font-size: 18px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-	.heart-s { font-size: 20px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-	.heart-sm { font-size: 25px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-	.heart-m { font-size: 30px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-	.heart-ml { font-size: 35px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-    .heart-l { font-size: 40px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
-    .heart-lg { font-size: 45px; color: #c21002; animation: pulse 1s infinite ease-in-out; }
+    /* 하트 크기 */
+    .heart-xs { font-size: 18px; }
+    .heart-s  { font-size: 20px; }
+    .heart-sm { font-size: 25px; }
+    .heart-m  { font-size: 30px; }
+    .heart-ml { font-size: 35px; }
+    .heart-l  { font-size: 40px; }
+    .heart-lg { font-size: 45px; }
 
-    /* WEEK 텍스트 */
+    .heart-xs,
+    .heart-s,
+    .heart-sm,
+    .heart-m,
+    .heart-ml,
+    .heart-l,
+    .heart-lg {
+      color: #c21002;
+      animation: pulse 1s infinite ease-in-out;
+      display: inline-block;
+    }
+
     .week-text {
       font-size: 45px;
-      font-weight: 900; /* Black 효과 */
+      font-weight: 900;
       letter-spacing: 0.5px;
-      margin: 0 20px; /* WEEK와 하트 사이 간격 */
+      margin: 0 20px;
       color: #00a5f1;
+      white-space: nowrap;
     }
 
-    /* 하트 두근 애니메이션 */
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
+      50% { transform: scale(1.25); }
     }
   </style>
 </head>
 <body>
   <div class="week-box">
     <span class="heart-xs">♥</span>
-	<span class="heart-s">♥</span>
-	<span class="heart-sm">♥</span>
-	<span class="heart-m">♥</span>
+    <span class="heart-s">♥</span>
+    <span class="heart-sm">♥</span>
+    <span class="heart-m">♥</span>
     <span class="heart-ml">♥</span>
-	<span class="heart-l">♥</span>
+    <span class="heart-l">♥</span>
     <span class="heart-lg">♥</span>
 
     <span class="week-text">WEEK 4</span>
 
     <span class="heart-lg">♥</span>
-	<span class="heart-l">♥</span>
-	<span class="heart-ml">♥</span>
-	<span class="heart-sm">♥</span>
-	<span class="heart-m">♥</span>
+    <span class="heart-l">♥</span>
+    <span class="heart-ml">♥</span>
+    <span class="heart-m">♥</span>
     <span class="heart-sm">♥</span>
+    <span class="heart-s">♥</span>
     <span class="heart-xs">♥</span>
   </div>
 </body>
